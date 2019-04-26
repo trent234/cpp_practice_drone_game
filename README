@@ -1,0 +1,4 @@
+This is a personal project to play with classes, dynamic binding, inheritance, and other fundamentals of c++
+Its a little game where the player maneuvers a drone through a course towards the finish line
+while avoiding obstacles and other maneuvers required before being able to get to the end.
+will be text based for now, but i'm thinking it would be interesting to add ncurses terminal visual
