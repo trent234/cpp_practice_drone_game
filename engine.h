@@ -7,7 +7,7 @@
 #ifndef engine_h
 #define engine_h
 
-#include "dll.h"
+#include "data_structures.h"
 
 class engine {
   public:
@@ -20,7 +20,7 @@ class engine {
   private:
     graph course;
     //have yet to implement/use this
-    int turn count; 
+    int turn_count; 
 };
 
 #endif //engine_h

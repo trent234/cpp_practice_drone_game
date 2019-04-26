@@ -1,35 +1,29 @@
 /* trent wilson
  * cs202 project 1: drone simulator
  * 2019_04_17
- * node class = pure virtual 
+ * interactive_obj class = pure virtual 
  */
 
-#ifndef node_h
-#define node_h
+#ifndef interactive_obj_h
+#define interactive_obj_h
 
-class node {
+class interactive_obj {
   public:
     //constructors
-    node();
+    interactive_obj();
 
     //normal functions needed
  
     //think of what pure virtual classes we will want
     virtual int action() = 0;
     
-    node& get_next();
-    node& get_prev();
-    int set_next(node* in);
-    int set_prev(node* in);
   protected:
 
   private:
 
-    node* next;
-    node* prev;
 };
 
-class drone: public node {
+class drone: public interactive_obj {
   public:
     drone();
     int action();
@@ -39,7 +33,7 @@ class drone: public node {
 
 };
 
-class black_hole: public node {
+class black_hole: public interactive_obj {
   public:
     black_hole();
     int action();
@@ -50,7 +44,7 @@ class black_hole: public node {
 
 };
 
-class loop: public node {
+class loop: public interactive_obj {
   public:
     loop();
     int action();
@@ -61,7 +55,7 @@ class loop: public node {
 
 };
 
-class finish: public node {
+class finish: public interactive_obj {
   public:
     finish();
     int action();
@@ -72,4 +66,4 @@ class finish: public node {
 
 };
 
-#endif //node_h
+#endif //interactive_obj_h

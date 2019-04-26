@@ -1,35 +1,16 @@
 /* trent wilson
  * cs202 project 1: drone simulator
  * 2019_04_17
- * node class = pure virtual 
+ * interactive_obj class = pure virtual 
  */
 
-#include "node.h"
+#include "interactive_objects.h"
 #include <iostream>
 
-//**** node
+//**** interactive_obj
 
-node::node():next(nullptr), prev(nullptr)
+interactive_obj::interactive_obj()
 {}
- 
-node& node::get_next(){
-  return *next;
-}
-
-node& node::get_prev(){
-  return *prev;
-}
-
-int node::set_next(node* in){
-  next = in;
-  return 0;
-}
-
-int node::set_prev(node* in){
-  prev = in;
-  return 0;
-}
-
 
 //**** drone
 
