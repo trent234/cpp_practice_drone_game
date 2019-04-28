@@ -6,7 +6,7 @@
 #ifndef DLL_H
 #define DLL_H
 
-#include "interavtive_objects.h"
+#include "interactive_objects.h"
 
 class node{
   public:
@@ -25,32 +25,29 @@ class lll{
   
   public:
     lll(); 
-    int traverse();
+    
+    int announce_neighbors();
     int prepend(node* in);
 
   private:
     node* head;
-//    node* tail;
   
-    int traverse(node* head);
+    int announce_neighbors(node* head, int count);
 };
 
 class graph{
 
   public:
     graph();
-    //void read_in_course();
-    void build_list(lll& adjacency_list, int* connecting_nodes);
-    void read_in_course(char* in_file);
+    void read_in_course();
+    void build_list(lll& individ_adj_list, int* connecting_nodes, int count);
     interactive_obj* create_interactive_obj(char in);
 
-   //this is probs temporary
-    void traverse(); 
+    void traverse(int start_index); 
   private:
     int adjacency_list_length;
     lll* adjacency_list;
     interactive_obj** graph_arr;
-
 };
 
 #endif //DLL_H

@@ -15,6 +15,7 @@ class interactive_obj {
     //normal functions needed
  
     //think of what pure virtual classes we will want
+    virtual int announce() = 0;
     virtual int action() = 0;
     
   protected:
@@ -26,6 +27,7 @@ class interactive_obj {
 class drone: public interactive_obj {
   public:
     drone();
+    int announce();
     int action();
   protected:
 
@@ -36,6 +38,7 @@ class drone: public interactive_obj {
 class black_hole: public interactive_obj {
   public:
     black_hole();
+    int announce();
     int action();
 
   protected:
@@ -47,6 +50,7 @@ class black_hole: public interactive_obj {
 class loop: public interactive_obj {
   public:
     loop();
+    int announce();
     int action();
 
   protected:
@@ -58,6 +62,7 @@ class loop: public interactive_obj {
 class finish: public interactive_obj {
   public:
     finish();
+    int announce();
     int action();
 
   protected:

@@ -17,9 +17,17 @@ interactive_obj::interactive_obj()
 drone::drone()
 {}
 
-int drone::action(){
+int drone::announce(){
   std::cout<<"i'm a drone!\n"; 
   return 0;
+}
+
+int drone::action(){
+  int user_choice; 
+  std::cout<<"drone- action!\n"; 
+  std::cout<<"where do you want to move?\n";
+  std::cin>>user_choice;
+  return user_choice;
 }
 
 //**** black_hole
@@ -27,9 +35,13 @@ int drone::action(){
 black_hole::black_hole()
 {}
 
+int black_hole::announce(){
+  std::cout<<"i'm a black_hole!\n"; 
+  return 0;
+}
 
 int black_hole::action(){
-  std::cout<<"i'm a black_hole!\n"; 
+  std::cout<<"black_hole- action!\n"; 
   return 0;
 }
 
@@ -38,9 +50,14 @@ int black_hole::action(){
 loop::loop()
 {}
 
-
+ 
+int loop::announce(){
+  std::cout<<"i'm a loop!\n"; 
+  return 0;
+}
+ 
 int loop::action(){
-  std::cout<<"I'm a loop!\n"; 
+  std::cout<<"loop- action!\n"; 
   return 0;
 }
 
@@ -49,8 +66,11 @@ int loop::action(){
 finish::finish()
 {}
 
-
+int finish::announce(){
+  std::cout<<"i'm a finish!\n"; 
+  return 0;
+}
 int finish::action(){
-  std::cout<<"i'm the finish line!\n"; 
+  std::cout<<"finish line- action!\n"; 
   return 0;
 }

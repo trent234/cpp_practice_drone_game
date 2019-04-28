@@ -8,9 +8,9 @@
 //#include <fstream> 
 //#include <iostream> 
 
-engine::engine(char* in)
+engine::engine()
 {
-  course.read_in_course(in);
+  course.read_in_course();
 }
 
 engine::~engine()
@@ -18,7 +18,7 @@ engine::~engine()
 
 int engine::run(){
 
-  course.traverse();
+  course.traverse(0);
 
   return 0; 
 }

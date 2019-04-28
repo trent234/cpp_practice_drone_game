@@ -11,9 +11,10 @@
 
 class engine {
   public:
-    engine(char* in);
+    engine();
     ~engine();
-    int run(); //this is what kicks it off
+    //this is what starts the simulation
+    int run(); 
      
   protected:
 
